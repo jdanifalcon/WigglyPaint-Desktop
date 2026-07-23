@@ -29,6 +29,22 @@ https://internet-janitor.itch.io/wigglypaint/devlog/1449946/please-dont-fall-for
 The author has clarified that WigglyPaint is **free and open source**, and warns users about fake websites and applications pretending to be official versions.
 
 ---
+## ⚠️ Windows SmartScreen Notice
+
+When running the installer for the first time, Windows SmartScreen may display a warning message saying **"Windows protected your PC"**. This is expected behavior — it happens with any independently distributed application that is not signed with a paid code-signing certificate.
+
+**This does not mean the application is harmful.** The source code is fully available in this repository for review.
+
+![Windows SmartScreen warning](assets/screenshots/smartscreen-warning.jpeg)
+
+### How to proceed:
+
+1. Click **"More info"** on the SmartScreen dialog
+2. Click **"Run anyway"**
+3. The installation will continue normally
+
+> 💡 **Why does this happen?** Microsoft SmartScreen flags executables that are not digitally signed with a trusted certificate. Code-signing certificates cost $70–$200 USD/year, which is not feasible for independent open-source projects. This is common across many Electron-based applications and open-source tools distributed outside the Microsoft Store.
+---
 
 ## ✨ Features
 
