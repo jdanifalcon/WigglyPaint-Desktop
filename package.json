@@ -1,0 +1,45 @@
+{
+  "name": "wigglypaint-desktop",
+  "version": "1.0.0",
+  "description": "Desktop packaging of WigglyPaint using Electron",
+  "author": "Jessica Falcón",
+  "license": "MIT",
+  "homepage": "https://github.com/jdanifalcon/WigglyPaint-Desktop",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jdanifalcon/WigglyPaint-Desktop.git"
+  },
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.jessicafalcon.wigglypaint",
+    "productName": "WigglyPaint Desktop",
+    "artifactName": "${productName}-Setup-${version}.${ext}",
+    "copyright": "Desktop packaging © 2026 Jessica Falcón. Original WigglyPaint by John Earnest.",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!node_modules/.cache/**"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "WigglyPaint Desktop"
+    }
+  },
+  "devDependencies": {
+    "electron": "^38.8.6",
+    "electron-builder": "^26.0.0"
+  }
+}
