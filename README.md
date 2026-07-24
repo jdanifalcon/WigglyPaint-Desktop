@@ -26,6 +26,14 @@ The author has clarified that WigglyPaint is **free and open source**, and warns
 
 ---
 
+## 📝 Development Story
+
+Read the full development story and technical process behind this project:
+
+📖 [**How a Drawing App Reminded Me Why I Enjoy Building Software**](https://medium.com/@jdofalcon/c%C3%B3mo-una-aplicaci%C3%B3n-de-dibujo-me-record%C3%B3-por-qu%C3%A9-disfruto-desarrollar-software-c859963afafe)
+
+---
+
 ## 📥 Download & Install
 
 Download the latest installer from the **Releases** page:
