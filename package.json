@@ -17,7 +17,7 @@
   "build": {
     "appId": "com.jessicafalcon.wigglypaint",
     "productName": "WigglyPaint Desktop",
-    "artifactName": "${productName}-Setup-${version}.${ext}",
+    "artifactName": "${productName}-Setup-${version}-${arch}.${ext}",
     "copyright": "Desktop packaging © 2026 Jessica Falcón. Original WigglyPaint by John Earnest.",
     "directories": {
       "output": "dist"
@@ -36,6 +36,19 @@
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
       "shortcutName": "WigglyPaint Desktop"
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["x64", "arm64"]
+        }
+      ],
+      "icon": "assets/icon.icns",
+      "category": "public.app-category.graphics-design"
+    },
+    "dmg": {
+      "title": "WigglyPaint Desktop"
     }
   },
   "devDependencies": {
