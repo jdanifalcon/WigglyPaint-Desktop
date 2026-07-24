@@ -46,7 +46,7 @@ The author has clarified that WigglyPaint is **free and open source**, and warns
 
 ## 📷 Screenshots
 
-> Screenshots coming soon.
+![Hola](gif-test/hola.gif)
 
 ---
 
