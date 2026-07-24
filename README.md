@@ -97,7 +97,7 @@ When running the installer for the first time, Windows SmartScreen may display a
 
 ## 🍎 macOS Gatekeeper Notice
 
-When opening WigglyPaint Desktop for the first time on macOS, you may see a message saying **"WigglyPaint Desktop can't be opened because Apple cannot check it for malicious software"**. This is expected behavior — it happens with any application that is not signed with a paid Apple Developer certificate.
+When opening WigglyPaint Desktop for the first time on macOS, you may see a warning saying the app **cannot be opened because the developer cannot be verified**. This is expected behavior — it happens with any application that is not signed with a paid Apple Developer certificate.
 
 **This does not mean the application is harmful.** The source code is fully available in this repository for review.
 
@@ -109,22 +109,17 @@ When opening WigglyPaint Desktop for the first time on macOS, you may see a mess
 
 1. **Right-click** (or Control-click) on the app in your Applications folder
 2. Select **"Open"** from the context menu
-3. Click **"Open"** in the dialog that appears
-4. The app will launch normally from now on
-
-**Alternative method:**
-
-1. Go to **System Settings** → **Privacy & Security**
-2. Scroll down to the Security section
-3. You will see a message about WigglyPaint Desktop being blocked
-4. Click **"Open Anyway"**
+3. A new dialog will appear with an **"Open"** button — click it
 
 <p align="center">
-  <img src="assets/screenshots/macos-warning-01.png" alt="macOS Gatekeeper alternative method" width="400">
+  <img src="assets/screenshots/macos-warning-01.png" alt="macOS Gatekeeper confirmation dialog" width="400">
 </p>
 
-> 💡 **Why does this happen?** macOS Gatekeeper requires applications to be signed with an Apple Developer certificate ($99 USD/year). This is not feasible for independent open-source projects. This is common across many Electron-based applications and open-source tools distributed outside the Mac App Store.
+4. The app will launch normally from now on
 
+> ⚠️ **Older Macs (Intel / pre-Ventura):** The "Open" button may not appear in the first dialog. In that case, go to **System Preferences** → **Security & Privacy** → **General**, and click **"Open Anyway"** next to the message about WigglyPaint Desktop. On newer Macs (Ventura and later), this option is in **System Settings** → **Privacy & Security**.
+
+> 💡 **Why does this happen?** macOS Gatekeeper requires applications to be signed with an Apple Developer certificate ($99 USD/year). This is not feasible for independent open-source projects. This is common across many Electron-based applications and open-source tools distributed outside the Mac App Store.
 ---
 
 ## 🛠️ Build From Source
