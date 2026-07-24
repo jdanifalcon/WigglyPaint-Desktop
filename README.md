@@ -12,9 +12,7 @@ The original WigglyPaint application was created by **John Earnest (Internet Jan
 
 ## 🌐 Original Project
 
-🎨 **WigglyPaint**
-
-<https://internet-janitor.itch.io/wigglypaint>
+🎨 **WigglyPaint** — <https://internet-janitor.itch.io/wigglypaint>
 
 ---
 
@@ -22,37 +20,15 @@ The original WigglyPaint application was created by **John Earnest (Internet Jan
 
 Before using or sharing WigglyPaint, please read the author's message regarding scam websites, fake desktop applications, and unauthorized redistributions.
 
-📢 **Please don't fall for scams**
-
-<https://internet-janitor.itch.io/wigglypaint/devlog/1449946/please-dont-fall-for-scams>
+📢 [**Please don't fall for scams**](https://internet-janitor.itch.io/wigglypaint/devlog/1449946/please-dont-fall-for-scams)
 
 The author has clarified that WigglyPaint is **free and open source**, and warns users about fake websites and applications pretending to be official versions.
 
 ---
 
-## ✨ Features
-
-- 🖥️ Native desktop application for **Windows** and **macOS**
-- 🎨 Same original WigglyPaint experience
-- ⚡ Electron-powered desktop packaging
-- 📦 Windows installer (.exe) and macOS disk image (.dmg)
-- 🍎 macOS builds for both Intel (x64) and Apple Silicon (arm64)
-- 🚀 Simple installation with desktop and Start Menu / Launchpad shortcuts
-- 🪟 Native application window
-- ⚙️ Automated macOS builds via GitHub Actions
-- ❤️ Open-source learning project
-
----
-
-## 📷 Screenshots
-
-![Hola](gif-test/hola.gif)
-
----
-
 ## 📥 Download & Install
 
-If you just want to use the application, download the latest installer from the **Releases** page:
+Download the latest installer from the **Releases** page:
 
 👉 [**Download the latest release**](https://github.com/jdanifalcon/WigglyPaint-Desktop/releases/latest)
 
@@ -66,7 +42,7 @@ If you just want to use the application, download the latest installer from the 
 
 ### macOS
 
-1. Download the `.dmg` file from the Assets section:
+1. Download the `.dmg` file that matches your Mac:
    - **Intel Mac** → `WigglyPaint-Desktop-Setup-x.x.x-x64.dmg`
    - **Apple Silicon (M1/M2/M3/M4)** → `WigglyPaint-Desktop-Setup-x.x.x-arm64.dmg`
 2. Open the `.dmg` file
@@ -75,6 +51,27 @@ If you just want to use the application, download the latest installer from the 
 5. Launch WigglyPaint Desktop from Applications or Launchpad
 
 > 💡 **Not sure which Mac you have?** Click the Apple menu () → "About This Mac". If the Chip says "Apple M1" or similar, download the arm64 version. If it says "Intel", download the x64 version.
+
+---
+
+## 📷 Screenshots
+
+<p align="center">
+  <img src="assets/screenshots/hola.gif" alt="WigglyPaint Desktop demo" width="600">
+</p>
+
+---
+
+## ✨ Features
+
+- 🖥️ Native desktop application for **Windows** and **macOS**
+- 🎨 Same original WigglyPaint experience
+- ⚡ Electron-powered desktop packaging
+- 📦 Windows installer (.exe) and macOS disk image (.dmg)
+- 🍎 macOS builds for both Intel (x64) and Apple Silicon (arm64)
+- 🚀 Simple installation with desktop and Start Menu / Launchpad shortcuts
+- ⚙️ Automated macOS builds via GitHub Actions
+- ❤️ Open-source learning project
 
 ---
 
@@ -100,9 +97,13 @@ When running the installer for the first time, Windows SmartScreen may display a
 
 ## 🍎 macOS Gatekeeper Notice
 
-When opening WigglyPaint Desktop for the first time on macOS, you may see a message saying **"WigglyPaint Desktop can't be opened because Apple cannot check it for malicious software"** or **"WigglyPaint Desktop is not from an identified developer"**. This is expected behavior — it happens with any application that is not signed with a paid Apple Developer certificate.
+When opening WigglyPaint Desktop for the first time on macOS, you may see a message saying **"WigglyPaint Desktop can't be opened because Apple cannot check it for malicious software"**. This is expected behavior — it happens with any application that is not signed with a paid Apple Developer certificate.
 
 **This does not mean the application is harmful.** The source code is fully available in this repository for review.
+
+<p align="center">
+  <img src="assets/screenshots/macos-warning.png" alt="macOS Gatekeeper warning" width="400">
+</p>
 
 ### How to proceed:
 
@@ -118,9 +119,9 @@ When opening WigglyPaint Desktop for the first time on macOS, you may see a mess
 3. You will see a message about WigglyPaint Desktop being blocked
 4. Click **"Open Anyway"**
 
-![Advertencia de instalación en macOS](assets/screenshots/macos-warning.png)
-
-![Advertencia de instalación macOS](assets/screenshots/macos-warning-01.png)
+<p align="center">
+  <img src="assets/screenshots/macos-warning-01.png" alt="macOS Gatekeeper alternative method" width="400">
+</p>
 
 > 💡 **Why does this happen?** macOS Gatekeeper requires applications to be signed with an Apple Developer certificate ($99 USD/year). This is not feasible for independent open-source projects. This is common across many Electron-based applications and open-source tools distributed outside the Mac App Store.
 
@@ -130,39 +131,27 @@ When opening WigglyPaint Desktop for the first time on macOS, you may see a mess
 
 If you want to build the application yourself:
 
-Clone the repository:
-
 ```bash
 git clone https://github.com/jdanifalcon/WigglyPaint-Desktop.git
-```
-
-Navigate to the project folder:
-
-```bash
 cd WigglyPaint-Desktop
-```
-
-Install dependencies:
-
-```bash
 npm install
+npm start        # Run in development mode
+npm run build    # Generate the installer (output in dist/)
 ```
 
-Run the application in development mode:
+> ⚠️ **Note:** Windows builds can only be generated on Windows, and macOS builds can only be generated on macOS. This project includes a [GitHub Actions workflow](.github/workflows/build-macos.yml) to automate macOS builds in the cloud.
 
-```bash
-npm start
-```
+---
 
-Build the installer:
+## 🧰 Tech Stack
 
-```bash
-npm run build
-```
-
-The installer will be generated in the `dist/` folder.
-
-> ⚠️ **Note:** Windows builds can only be generated on Windows, and macOS builds can only be generated on macOS. This project includes a [GitHub Actions workflow](.github/workflows/build-macos.yml) that automates macOS builds in the cloud.
+| Tool | Purpose |
+|------|---------|
+| Electron | Runtime — wraps the HTML app in a native desktop window |
+| electron-builder | Packaging — generates .exe (NSIS) and .dmg installers |
+| Node.js / npm | Development environment and dependency management |
+| GitHub Actions | CI/CD — automated macOS builds using `macos-latest` |
+| Git / GitHub | Version control, releases, and distribution |
 
 ---
 
@@ -177,7 +166,10 @@ WigglyPaint-Desktop/
 │   ├── icon.ico
 │   ├── icon.icns
 │   └── screenshots/
-│       └── smartscreen-warning.jpeg
+│       ├── hola.gif
+│       ├── smartscreen-warning.jpeg
+│       ├── macos-warning.png
+│       └── macos-warning-01.png
 ├── main.js
 ├── package.json
 ├── WigglyPaint.html
@@ -187,11 +179,25 @@ WigglyPaint-Desktop/
 
 ---
 
+## 🐛 Known Issues & Solutions
+
+During development, several common issues were encountered and resolved. These are documented here for anyone who wants to build or fork this project.
+
+| Issue | Cause | Solution |
+|-------|-------|----------|
+| `EJSONPARSE` error on `npm start` | Malformed JSON in package.json (misplaced braces) | Fix JSON structure — validate with a JSON linter |
+| `publisherName` schema validation error | electron-builder v26 deprecated this field inside `win` | Remove the `publisherName` field |
+| Windows SmartScreen warning | Unsigned executable | Expected behavior — [see notice above](#%EF%B8%8F-windows-smartscreen-notice) |
+| macOS Gatekeeper block | Unsigned application | Expected behavior — [see notice above](#-macos-gatekeeper-notice) |
+| macOS `.dmg` not compatible | Build was arm64, Mac was Intel (or vice versa) | Configure `arch: ["x64", "arm64"]` to build for both |
+| GitHub Actions publish error | Workflow tried to auto-publish without a `GH_TOKEN` | Add `--publish never` to the build command |
+| LF/CRLF warnings | Line ending conversion between Windows and Git | Not an error — Git auto-converts; can be configured in `.gitattributes` |
+
+---
+
 ## 🤝 Contributing
 
-Contributions are welcome!
-
-If you have ideas to improve the desktop packaging, installer, documentation, or cross-platform compatibility, feel free to open an Issue or submit a Pull Request.
+Contributions are welcome! Check the [open issues](https://github.com/jdanifalcon/WigglyPaint-Desktop/issues) for planned features, or feel free to open a new one.
 
 ---
 
