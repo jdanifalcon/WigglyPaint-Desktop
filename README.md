@@ -118,6 +118,10 @@ When opening WigglyPaint Desktop for the first time on macOS, you may see a mess
 3. You will see a message about WigglyPaint Desktop being blocked
 4. Click **"Open Anyway"**
 
+![Advertencia de instalación en macOS](assets/screenshots/macos-warning.png)
+
+![Advertencia de instalación macOS](assets/screenshots/macos-warning-01.png)
+
 > 💡 **Why does this happen?** macOS Gatekeeper requires applications to be signed with an Apple Developer certificate ($99 USD/year). This is not feasible for independent open-source projects. This is common across many Electron-based applications and open-source tools distributed outside the Mac App Store.
 
 ---
